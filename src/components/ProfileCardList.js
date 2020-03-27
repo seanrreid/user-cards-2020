@@ -1,22 +1,25 @@
 import React from 'react';
+import { Section, Columns, Column } from 'bloomer';
 import ProfileCard from './ProfileCard';
-import './ProfileCardList.css';
+
 
 const ProfileCardList = props => {
   const { userData } = props;
-  return (
-    <ul className="ProfileCardList">
-      {userData.length > 0 ? (
-        userData.map(user => (
-          <li className="ProfileCard" key={user.login.uuid}>
-            <ProfileCard user={user} />
-          </li>
-        ))
-      ) : (
-        <li>No User Data</li>
-      )}
-    </ul>
-  );
+    return (
+      <Section>
+        <Columns>
+            {userData.length > 0 ? (
+              userData.map(user => (
+                <Column className="ProfileCard" key={user.login.uuid}>
+                  <ProfileCard user={user} />
+                </Column>
+              ))
+            ) : (
+              <li>No User Data</li>
+            )}
+        </Columns>
+      </Section>
+    );
 };
 
 export default ProfileCardList;

@@ -1,5 +1,6 @@
 // Import React libraries
 import React, { Component } from 'react';
+import 'bulma/css/bulma.css'
 
 // Import components
 import ProfileCardList from './components/ProfileCardList';
