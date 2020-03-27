@@ -13,7 +13,7 @@ const ProfileCardList = props => {
           </li>
         ))
       ) : (
-        <p>No User Data</p>
+        <li>No User Data</li>
       )}
     </ul>
   );
